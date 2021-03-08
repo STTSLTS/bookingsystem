@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schedule_id: MyString
+  schedule_title: MyString
+  start: 2021-03-06 00:31:18
+  end: 2021-03-06 00:31:18
+  facility_type: MyString
+  room_name: MyString
+
+two:
+  schedule_id: MyString
+  schedule_title: MyString
+  start: 2021-03-06 00:31:18
+  end: 2021-03-06 00:31:18
+  facility_type: MyString
+  room_name: MyString
