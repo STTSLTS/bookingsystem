@@ -1,5 +1,42 @@
 <h1>New Booking</h1>
 
-<%= render 'form', booking: @booking %>
-<%= link_to 'Back', bookings_path %>
+<%= form_with(model: @booking) do |form| %>
+
+<div>
+<table>
+<thead>
+<tr>
+<th>Start Date</th>
+<th>End Date</th>
+<th>Room Name</th>
+<th>Book the slot</th>
+</tr>
+</thead>
+
+<tbody>
+<% @schedules.each do |schedule| %>
+   <% unless schedule.schedule_title == 'Booked' %>
+
+     <% @rooms.each do |room| %>
+        <tr>
+        <% unless schedule.room_name != room.room_id %>
+
+        <td><%= schedule.start %></td>
+        <td><%= schedule.end %></td>
+        <td><%= room.room_name %></td>
+        <td><%= radio_button :schedule_id, schedule.schedule_id, required: true %> <i>Book this Facility</i></td>
+        <% end %>
+        </tr>
+     <% end %>
+  <% end %>
+<% end %>
+</tbody>
+
+</table>
+</div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+<% end %>
 

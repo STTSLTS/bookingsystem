@@ -21,8 +21,9 @@ class BookingsController < ApplicationController
   # GET /bookings/new
   def new
     @booking = Booking.new
-    #@schedules = Schedule.new
-    #@user = User.new
+    @schedules = Schedule.all
+    @users = User.all
+    @rooms = Room.all
 
   end
 
@@ -32,6 +33,8 @@ class BookingsController < ApplicationController
 
   # POST /bookings or /bookings.json
   def create
+    @schedules = Schedule.all
+    @rooms = Room.all
     @booking = Booking.new(booking_params)
     #@booking = Booking.new(params[:schedule_id])
     respond_to do |format|
