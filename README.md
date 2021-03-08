@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Project is built in virtual box using ubuntu 16.04 version
 
-Things you may want to cover:
+Provisioning Script provided :
+* provisioningscript.sh
 
-* Ruby version
+Ruby Version
+* Ruby 3.0.0
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Rails Verion
+* Rails 6.1.3
